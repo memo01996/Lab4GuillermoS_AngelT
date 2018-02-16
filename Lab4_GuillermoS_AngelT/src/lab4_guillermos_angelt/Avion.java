@@ -1,10 +1,7 @@
-
-
 package lab4_guillermos_angelt;
 
+public class Avion extends Aereo {
 
-public class Avion extends Aereo{
-    
     private int nPasajeros;
     private boolean funcion;
 
@@ -14,11 +11,6 @@ public class Avion extends Aereo{
 
     public Avion(int nPasajeros, boolean funcion, int gasolina, String pais_in, String pais_out, int tanque, int distancia, int altitud) {
         super(gasolina, pais_in, pais_out, tanque, distancia, altitud);
-        this.nPasajeros = nPasajeros;
-        this.funcion = funcion;
-    }
-
-    public Avion(int nPasajeros, boolean funcion) {
         this.nPasajeros = nPasajeros;
         this.funcion = funcion;
     }
@@ -43,9 +35,5 @@ public class Avion extends Aereo{
     public String toString() {
         return "Avion{" + "nPasajeros=" + nPasajeros + ", funcion=" + funcion + '}';
     }
-    
-    
-    
-    
 
 }

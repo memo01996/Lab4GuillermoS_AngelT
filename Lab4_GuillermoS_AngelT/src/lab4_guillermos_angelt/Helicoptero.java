@@ -1,23 +1,15 @@
-
-
 package lab4_guillermos_angelt;
 
+public class Helicoptero extends Aereo {
 
-public class Helicoptero extends Aereo{
-    
     private int nHelices, patas;
 
     public Helicoptero() {
-        super();        
+        super();
     }
 
     public Helicoptero(int nHelices, int patas, int gasolina, String pais_in, String pais_out, int tanque, int distancia, int altitud) {
         super(gasolina, pais_in, pais_out, tanque, distancia, altitud);
-        this.nHelices = nHelices;
-        this.patas = patas;
-    }
-
-    public Helicoptero(int nHelices, int patas) {
         this.nHelices = nHelices;
         this.patas = patas;
     }
@@ -42,7 +34,5 @@ public class Helicoptero extends Aereo{
     public String toString() {
         return "Helicoptero{" + "nHelices=" + nHelices + ", patas=" + patas + '}';
     }
-
-    
 
 }

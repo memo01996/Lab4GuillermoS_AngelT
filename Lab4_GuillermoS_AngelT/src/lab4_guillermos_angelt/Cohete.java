@@ -1,10 +1,7 @@
-
-
 package lab4_guillermos_angelt;
 
+public class Cohete extends Espacial {
 
-public class Cohete extends Espacial{
-    
     private int num_separaciones;
 
     public Cohete() {
@@ -16,18 +13,9 @@ public class Cohete extends Espacial{
         this.num_separaciones = num_separaciones;
     }
 
-    public Cohete(int num_separaciones) {
-        this.num_separaciones = num_separaciones;
-    }
-
     @Override
     public String toString() {
         return "Cohete{" + "num_separaciones=" + num_separaciones + '}';
     }
-
-    
-
-    
-    
 
 }

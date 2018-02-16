@@ -22,10 +22,6 @@ public class Gorilamontana extends Primates {
         this.IQ = IQ;
     }
 
-    public int getIQ() {
-        return IQ;
-    }
-
     public void setIQ(int IQ) {
         if (IQ > 129 && IQ < 140) {
             this.IQ = IQ;

@@ -1,10 +1,7 @@
-
-
 package lab4_guillermos_angelt;
 
+public class Espacial extends MediosTransporte {
 
-public class Espacial extends MediosTransporte{
-    
     protected int combustible;
     protected String planeta_partida, planeta_llegada;
 
@@ -14,12 +11,6 @@ public class Espacial extends MediosTransporte{
 
     public Espacial(int combustible, String planeta_partida, String planeta_llegada, int tanque, int distancia, int altitud) {
         super(tanque, distancia, altitud);
-        this.combustible = combustible;
-        this.planeta_partida = planeta_partida;
-        this.planeta_llegada = planeta_llegada;
-    }
-
-    public Espacial(int combustible, String planeta_partida, String planeta_llegada) {
         this.combustible = combustible;
         this.planeta_partida = planeta_partida;
         this.planeta_llegada = planeta_llegada;
@@ -53,7 +44,5 @@ public class Espacial extends MediosTransporte{
     public String toString() {
         return "Espacial{" + "combustible=" + combustible + ", planeta_partida=" + planeta_partida + ", planeta_llegada=" + planeta_llegada + '}';
     }
-    
-    
 
 }

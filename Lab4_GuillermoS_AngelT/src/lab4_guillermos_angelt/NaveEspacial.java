@@ -1,10 +1,7 @@
-
-
 package lab4_guillermos_angelt;
 
+public class NaveEspacial extends Espacial {
 
-public class NaveEspacial extends Espacial{
-    
     private int nPropulsores;
 
     public NaveEspacial() {
@@ -13,10 +10,6 @@ public class NaveEspacial extends Espacial{
 
     public NaveEspacial(int nPropulsores, int combustible, String planeta_partida, String planeta_llegada, int tanque, int distancia, int altitud) {
         super(combustible, planeta_partida, planeta_llegada, tanque, distancia, altitud);
-        this.nPropulsores = nPropulsores;
-    }
-
-    public NaveEspacial(int nPropulsores) {
         this.nPropulsores = nPropulsores;
     }
 
@@ -33,5 +26,4 @@ public class NaveEspacial extends Espacial{
         return "NaveEspacial{" + "nPropulsores=" + nPropulsores + '}';
     }
 
-    
 }
