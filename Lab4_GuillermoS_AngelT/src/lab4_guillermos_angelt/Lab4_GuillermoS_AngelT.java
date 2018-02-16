@@ -94,7 +94,7 @@ public class Lab4_GuillermoS_AngelT {
                 for (Object temp : usuarios) {
                     if (temp instanceof Ingenieros) {
                         System.out.println("");
-                        ;
+                        
                         
                         do {
                             switch(menu2()){
@@ -134,11 +134,14 @@ public class Lab4_GuillermoS_AngelT {
                                     do{
                                         switch(CRUD()){
                                             case 1:
-                                                System.err.println("Agregar Primates\n");
+                                                System.out.println("Agregar Primates\n");
+                                                
+                                                
+                                                
                                                 break;
                                             case 2:
                                                 System.out.println("Modificar Primates\n"
-                                                        + "Ingrese la posición del ingeniero a eliminar: ");
+                                                        + "Ingrese la posición del Primate a eliminar: ");
                                                 int pos_mod_prim= sc.nextInt();
                                                 
                                                 
@@ -168,15 +171,15 @@ public class Lab4_GuillermoS_AngelT {
                                                 System.out.println("Agregar Transportes\n");
                                                 break;
                                             case 2:
-                                                System.out.println("Modificar Primates\n"
-                                                        + "Ingrese la posición del ingeniero a eliminar: ");
+                                                System.out.println("Modificar Transportes\n"
+                                                        + "Ingrese la posición del transporte a eliminar: ");
                                                 int pos_mod_prim= sc.nextInt();
                                                 
                                                 
                                                 break;
                                             case 3:
-                                                System.out.println("Eliminar Primates\n"
-                                                        + "Ingrese la posición del Primate a eliminar: ");
+                                                System.out.println("Eliminar Transportes\n"
+                                                        + "Ingrese la posición del Transporte a eliminar: ");
                                                 int pos= sc.nextInt();
                                                 usuarios.remove(pos);
                                                 
@@ -191,6 +194,35 @@ public class Lab4_GuillermoS_AngelT {
                                     }while(CRUD()!=0);
                                     break;
                                 case 4:
+                                    System.out.println("Viajes\n");
+                                    
+                                    do{
+                                        switch(CRUD()){
+                                            case 1:
+                                                System.out.println("Agregar Viajes\n");
+                                                break;
+                                            case 2:
+                                                System.out.println("Modificar Viajes\n"
+                                                        + "Ingrese la posición del Viaje a eliminar: ");
+                                                int pos_mod_prim= sc.nextInt();
+                                                
+                                                
+                                                break;
+                                            case 3:
+                                                System.out.println("Eliminar Viajes\n"
+                                                        + "Ingrese la posición del Viaje a eliminar: ");
+                                                int pos= sc.nextInt();
+                                                usuarios.remove(pos);
+                                                
+                                                break;
+                                            default:
+                                                if (CRUD()<0 || CRUD() >1){
+                                                System.err.println("Seleccione una opción válida\n");}
+                                                break;
+                                                
+                                        }
+                                        
+                                    }while(CRUD()!=0);
                                     break;
                                 default:
                                     break;
