@@ -108,8 +108,54 @@ public class Lab4_GuillermoS_AngelT {
                                                 break;
                                             case 2:
                                                 System.out.println("Modificar Ingenieros\n"
-                                                        + "Ingrese la posición del ingeniero a eliminar: ");
-                                                int pos_mod= sc.nextInt();
+                                                            + "Ingrese la posición del ingeniero a eliminar: ");
+                                                    int pos_mod = sc.nextInt();
+                                                    for (Object tempo : usuarios) {
+                                                        if (((String) tempo).equalsIgnoreCase(usuario)) {
+                                                            
+                                                            usuarios.remove(pos_mod);
+                                                            System.out.println("Escriba el nombre: ");
+                                                            String nombre = sc.next();
+
+                                                            System.out.println("Escriba el grupo sanguíneo: ");
+                                                            String grupo = sc.next();
+
+                                                            System.out.println("Escriba el sexo: ");
+                                                            String sexo = sc.next();
+
+                                                            System.out.println("Ingrese la altura: ");
+                                                            double altura = sc.nextDouble();
+
+                                                            System.out.println("Ingrese el peso: ");
+                                                            double peso = sc.nextDouble();
+
+                                                            System.out.println("Crear Ingenieros\n"
+                                                                    + "Ingrese el email: ");
+                                                            String email = sc.next();
+
+                                                            System.out.println("Ingrese un usuario: ");
+                                                            String user = sc.next();
+
+                                                            System.out.println("Ingrese la contraseña: ");
+                                                            String pwds = sc.next();
+
+                                                            String resp = "";
+                                                            do {
+                                                                System.out.println("Ingrese idioma: ");
+                                                                idiomas.add(sc.next());
+                                                                System.out.println("Desea ingresar otro idioma: (si/no)\n");
+                                                                resp = sc.next();
+                                                            } while (resp.equalsIgnoreCase("si"));
+
+                                                            System.out.println("Ingrese la cantidad de café: ");
+                                                            int cafe = sc.nextInt();
+
+                                                            System.out.println("Fecha de nacimiento: ");
+                                                            String fecha = sc.next();
+
+                                                            usuarios.add(new Ingenieros(email, user, pwds, idiomas, cafe, fecha, nombre, grupo, sexo, altura, peso));
+                                                        }
+                                                    }
                                                 
                                                 break;
                                             case 3:
