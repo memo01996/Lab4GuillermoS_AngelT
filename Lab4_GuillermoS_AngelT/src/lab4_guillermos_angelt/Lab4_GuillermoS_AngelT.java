@@ -13,7 +13,7 @@ public class Lab4_GuillermoS_AngelT {
         ArrayList<Ingenieros> usuarios= new ArrayList();
         ArrayList<String> idiomas = new ArrayList();
         
-        menu();
+        
         do {
             switch (menu()) {
             case 1:
@@ -37,10 +37,10 @@ public class Lab4_GuillermoS_AngelT {
                         String sexo = sc.next();
                         
                         System.out.println("Ingrese la altura: ");
-                        int altura= sc.nextInt();
+                        double altura= sc.nextDouble();
                         
                         System.out.println("Ingrese el peso: ");
-                        int peso=sc.nextInt();
+                        double peso=sc.nextDouble();
                         
                         System.out.println("Crear Ingenieros\n"
                                 + "Ingrese el email: ");
@@ -48,6 +48,9 @@ public class Lab4_GuillermoS_AngelT {
                         
                         System.out.println("Ingrese un usuario: ");
                         String user = sc.next();
+                        
+                        System.out.println("Ingrese la contraseña: ");
+                        String pwd = sc.next();
                         
                         String resp="";
                         do{
@@ -64,12 +67,12 @@ public class Lab4_GuillermoS_AngelT {
                         System.out.println("Fecha de nacimiento: ");
                         String fecha = sc.next();
                         
-                        usuarios.add(new Ingenieros(resp, user, resp, idiomas, cafe, fecha, nombre, grupo, sexo, altura, peso));
+                        usuarios.add(new Ingenieros(email, user, pwd, idiomas, cafe, fecha, nombre, grupo, sexo, altura, peso));
                         
                         break;
                     default:
                         if (agregarIng<0 || agregarIng >1){
-                        System.out.println("Seleccione una opción válida\n");}
+                        System.err.println("Seleccione una opción válida\n");}
                         break;
                 }
                 
@@ -85,14 +88,20 @@ public class Lab4_GuillermoS_AngelT {
                 System.out.println("Ingrese la contraseña: ");
                 pwd=sc.next();
                 
+                for (Object temp : usuarios) {
+                    if (temp instanceof Ingenieros) {
+                        System.out.println("");
+                        CRUD();
+                    }
+                    
+                }
                 
                 
                 break;
-            case 3:
-                break;
-            case 4:
-                break;
+           
             default:
+                if (menu()<0 || menu() >2){
+                        System.err.println("Seleccione una opción válida\n");}
                 break;
         }
         }while(menu()!=0);
@@ -120,6 +129,16 @@ public class Lab4_GuillermoS_AngelT {
                 + "0 - regresar\n");
         int admin = sc.nextInt();
         return admin;
+    }
+    
+    public static int CRUD() {
+        System.out.println("Agregar "
+                + "Modificar"
+                + "Eliminar"
+                + "Salir"
+                + "Ingrese Opcion:");
+        int op = sc.nextInt();
+        return op;
     }
 
 }
