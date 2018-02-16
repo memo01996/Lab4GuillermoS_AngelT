@@ -49,7 +49,7 @@ public class Lab4_GuillermoS_AngelT {
                         System.out.println("Ingrese un usuario: ");
                         String user = sc.next();
                         
-                        System.out.println("Ingrese un usuario: ");
+                        System.out.println("Ingrese la contraseña: ");
                         String pwd = sc.next();
                         
                         String resp="";
@@ -72,7 +72,7 @@ public class Lab4_GuillermoS_AngelT {
                         break;
                     default:
                         if (agregarIng<0 || agregarIng >1){
-                        System.out.println("Seleccione una opción válida\n");}
+                        System.err.println("Seleccione una opción válida\n");}
                         break;
                 }
                 
@@ -93,15 +93,15 @@ public class Lab4_GuillermoS_AngelT {
                         System.out.println("");
                         CRUD();
                     }
+                    
                 }
                 
                 
                 break;
-            case 3:
-                break;
-            case 4:
-                break;
+           
             default:
+                if (menu()<0 || menu() >2){
+                        System.err.println("Seleccione una opción válida\n");}
                 break;
         }
         }while(menu()!=0);
