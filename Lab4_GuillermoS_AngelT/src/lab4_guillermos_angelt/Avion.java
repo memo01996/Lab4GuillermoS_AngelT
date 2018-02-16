@@ -3,13 +3,13 @@ package lab4_guillermos_angelt;
 public class Avion extends Aereo {
 
     private int nPasajeros;
-    private boolean funcion;
+    private String funcion;
 
     public Avion() {
         super();
     }
 
-    public Avion(int nPasajeros, boolean funcion, int gasolina, String pais_in, String pais_out, int tanque, int distancia, int altitud) {
+    public Avion(int nPasajeros, String funcion, int gasolina, String pais_in, String pais_out, int tanque, int distancia, int altitud) {
         super(gasolina, pais_in, pais_out, tanque, distancia, altitud);
         this.nPasajeros = nPasajeros;
         this.funcion = funcion;
@@ -23,11 +23,11 @@ public class Avion extends Aereo {
         this.nPasajeros = nPasajeros;
     }
 
-    public boolean isFuncion() {
+    public String isFuncion() {
         return funcion;
     }
 
-    public void setFuncion(boolean funcion) {
+    public void setFuncion(String funcion) {
         this.funcion = funcion;
     }
 

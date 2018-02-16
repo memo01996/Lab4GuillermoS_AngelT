@@ -15,6 +15,7 @@ public class Lab4_GuillermoS_AngelT {
         ArrayList<NaveEspacial> nave = new ArrayList();
         ArrayList<MediosTransporte> medios = new ArrayList();
         ArrayList<String> idiomas = new ArrayList();
+        ArrayList<String> monos = new ArrayList();
         
         
         do {
@@ -241,6 +242,75 @@ public class Lab4_GuillermoS_AngelT {
                                         switch(CRUD()){
                                             case 1:
                                                 System.out.println("Agregar Transportes\n");
+                                                
+                                                System.out.println("Ingrese la capacidad del tanque: ");
+                                                int capacidad=sc.nextInt();
+                                                
+                                                System.out.println("Ingrese la distancia que puede recorrer: ");
+                                                int distancia=sc.nextInt();
+                                                
+                                                System.out.println("Qué tipo de nave tipo de medio usará: "
+                                                        + "1 - Aéreo normal\n"
+                                                        + "2 - Espacial\n");
+                                                int op = sc.nextInt();
+                                                
+                                                if (op == 1){
+                                                    System.out.println("Qué tipo de combustible tiene la aeronave: "
+                                                        + "1 - Súper\n"
+                                                        + "2 - Regular\n"
+                                                        + "3- Diésel\n");
+                                                    int gas = sc.nextInt();
+                                                    
+                                                    System.out.println("Ingrese el país de salida: ");
+                                                    String pais_out = sc.next();
+                                                    
+                                                    System.out.println("Ingrese el país de entrada: ");
+                                                    String pais_in = sc.next();
+                                                    
+                                                    System.out.println("Ingrese el tipo de nave: "
+                                                        + "1 - Helicóptero\n"
+                                                        + "2 - Avión Comercial\n");
+                                                    int tipo_nav = sc.nextInt();
+                                                    
+                                                    if (tipo_nav ==1){
+                                                        System.out.println("Ingrese el número de hélices: ");
+                                                        int n_helices=sc.nextInt();
+                                                        
+                                                        System.out.println("Ingrese el número de patas: ");
+                                                        int n_patas=sc.nextInt();
+                                                    } else{
+                                                        System.out.println("Soporta piloto automático? ");
+                                                        int passengers=sc.nextInt();
+                                                        
+                                                        System.out.println("Ingrese el número de patas: ");
+                                                        int n_patas=sc.nextInt();
+                                                    }
+                                                } else{
+                                                    System.out.println("Qué tipo de combustible tiene la nave: "
+                                                        + "1 - Químico sólido\n"
+                                                        + "2 - Propelente líquido\n");
+                                                    int combustible = sc.nextInt();
+                                                    
+                                                    System.out.println("Ingrese el planeta de salida: ");
+                                                    String planeta_out = sc.next();
+                                                    
+                                                    System.out.println("Ingrese el planeta de entrada: ");
+                                                    String planeta_in = sc.next();
+                                                    
+                                                    System.out.println("Ingrese el tipo de nave espacial: "
+                                                        + "1 - Nave espacial\n"
+                                                        + "2 - Cohete\n");
+                                                    int tipo_nav = sc.nextInt();
+                                                    if (tipo_nav ==1){
+                                                        System.out.println("Ingrese el número de propulsores: ");
+                                                        int propulsores=sc.nextInt();
+                                                    } else{
+                                                        System.out.println("Número de separaciones ");
+                                                        int separaciones=sc.nextInt();
+                                                    }
+                                                }
+                                                
+                                                
                                                 break;
                                             case 2:
                                                 System.out.println("Modificar Transportes\n"
@@ -312,7 +382,7 @@ public class Lab4_GuillermoS_AngelT {
                 break;
            
             default:
-                if (menu()<0 || menu() >2){
+                if (menu()<0 || menu() >1){
                         System.err.println("Seleccione una opción válida\n");}
                 break;
         }
