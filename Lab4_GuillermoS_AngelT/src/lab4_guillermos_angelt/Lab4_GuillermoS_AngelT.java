@@ -91,8 +91,24 @@ public class Lab4_GuillermoS_AngelT {
                 for (Object temp : usuarios) {
                     if (temp instanceof Ingenieros) {
                         System.out.println("");
-                        CRUD();
-                    }
+                        ;
+                        
+                        do {
+                            switch(menu2()){
+                                case 1:
+                                    System.out.println("");
+                                    break;
+                                case 2:
+                                    break;
+                                case 3:
+                                    break;
+                                    
+                            }
+                            
+                        } while(menu2()!=0);
+                        
+                    } else
+                        System.err.println("Usuario o contraseña incorrecta\n");
                     
                 }
                 
@@ -132,10 +148,10 @@ public class Lab4_GuillermoS_AngelT {
     }
     
     public static int CRUD() {
-        System.out.println("Agregar "
-                + "Modificar"
-                + "Eliminar"
-                + "Salir"
+        System.out.println("1 - Agregar\n"
+                + "2 - Modificar\n"
+                + "3 - Eliminar\n"
+                + "0 - Salir\n"
                 + "Ingrese Opcion:");
         int op = sc.nextInt();
         return op;
