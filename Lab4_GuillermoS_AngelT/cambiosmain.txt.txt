@@ -1,0 +1,10 @@
+public static int CRUD() {
+        System.out.println("Agregar "
+                + "Modificar"
+                + "Eliminar"
+                + "Salir"
+                + "Ingrese Opcion:");
+        int op = sc.nextInt();
+        return op;
+    }
+
