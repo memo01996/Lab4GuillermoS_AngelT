@@ -8,8 +8,8 @@ public class Helicoptero extends Aereo {
         super();
     }
 
-    public Helicoptero(int nHelices, int patas, int gasolina, String pais_in, String pais_out, int tanque, int distancia, int altitud) {
-        super(gasolina, pais_in, pais_out, tanque, distancia, altitud);
+    public Helicoptero(int nHelices, int patas, String pais_in, String pais_out, String Gaso, int tanque, int distancia, int altitud) {
+        super(pais_in, pais_out, Gaso, tanque, distancia, altitud);
         this.nHelices = nHelices;
         this.patas = patas;
     }
