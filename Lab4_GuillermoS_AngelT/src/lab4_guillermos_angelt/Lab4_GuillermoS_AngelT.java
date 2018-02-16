@@ -10,6 +10,7 @@ public class Lab4_GuillermoS_AngelT {
     public static void main(String[] args) {
         
         ArrayList<Ingenieros> usuarios= new ArrayList();
+        ArrayList<String> idiomas = new ArrayList();
         
         menu();
         do {
@@ -19,17 +20,54 @@ public class Lab4_GuillermoS_AngelT {
                 do{
                 System.out.println("Menú Agregar\n"
                         + "1 - Ingenieros\n"
-                        + "2 - Primates\n"
                         + "0 - regresar\n");
                 agregarIng = sc.nextInt();
                 
                 switch(agregarIng){
                     case 1: 
-                        break;
-                    case 2:
+                        
+                        System.out.println("Escriba el nombre: ");
+                        String nombre= sc.next();
+                        
+                        System.out.println("Escriba el grupo sanguíneo: ");
+                        String grupo = sc.next();
+                        
+                        System.out.println("Escriba el grupo sanguíneo: ");
+                        String sexo = sc.next();
+                        
+                        System.out.println("Ingrese la altura: ");
+                        int altura= sc.nextInt();
+                        
+                        System.out.println("Ingrese el peso: ");
+                        int peso=sc.nextInt();
+                        
+                        System.out.println("Crear Ingenieros\n"
+                                + "Ingrese el email: ");
+                        String email = sc.next();
+                        
+                        System.out.println("Ingrese un usuario: ");
+                        String user = sc.next();
+                        
+                        String resp="";
+                        do{
+                            System.out.println("Ingrese idioma: ");
+                            idiomas.add(sc.next());
+                            System.out.println("Desea ingresar otro idioma: (si/no)\n");
+                            resp=sc.next();
+                        } while(resp.equalsIgnoreCase("si"));
+                        
+                                               
+                        System.out.println("Ingrese la cantidad de café: ");
+                        int cafe = sc.nextInt();
+                        
+                        System.out.println("Fecha de nacimiento: ");
+                        String fecha = sc.next();
+                        
+                        usuarios.add(new Ingenieros(resp, user, resp, idiomas, cafe, fecha, nombre, grupo, sexo, altura, peso));
+                        
                         break;
                     default:
-                        if (agregarIng<0 || agregarIng >2){
+                        if (agregarIng<0 || agregarIng >1){
                         System.out.println("Seleccione una opción válida\n");}
                         break;
                 }
@@ -45,6 +83,7 @@ public class Lab4_GuillermoS_AngelT {
                 
                 System.out.println("Ingrese la contraseña: ");
                 pwd=sc.next();
+                
                 
                 
                 break;
