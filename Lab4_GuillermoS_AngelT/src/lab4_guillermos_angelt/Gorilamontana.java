@@ -17,8 +17,8 @@ public class Gorilamontana extends Primates {
         super();
     }
 
-    public Gorilamontana(int IQ, Aereo aereo, Espacial espacial, double comida, String planeta, String lugarnacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {
-        super(aereo, espacial, comida, planeta, lugarnacimiento, Nombre, GrupoSanguineo, Sexo, altura, peso);
+    public Gorilamontana(int IQ, String tipo, double comida, String planeta, String lugarnacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {
+        super(tipo, comida, planeta, lugarnacimiento, Nombre, GrupoSanguineo, Sexo, altura, peso);
         this.IQ = IQ;
     }
 

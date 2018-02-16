@@ -11,8 +11,7 @@ package lab4_guillermos_angelt;
  */
 public class Primates extends SeresVivos {
 
-    private Aereo aereo;
-    private Espacial espacial;
+    private String tipo;
     private double comida;
     private String planeta;
     private String lugarnacimiento;
@@ -21,29 +20,25 @@ public class Primates extends SeresVivos {
         super();
     }
 
-    public Primates(Aereo aereo, Espacial espacial, double comida, String planeta, String lugarnacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {
+    public Primates(String tipo, double comida, String planeta, String lugarnacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {
         super(Nombre, GrupoSanguineo, Sexo, altura, peso);
-        this.aereo = aereo;
-        this.espacial = espacial;
+        this.tipo = tipo;
         this.comida = comida;
         this.planeta = planeta;
         this.lugarnacimiento = lugarnacimiento;
     }
 
-    public Aereo getAereo() {
-        return aereo;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setAereo(Aereo aereo) {
-        this.aereo = aereo;
-    }
-
-    public Espacial getEspacial() {
-        return espacial;
-    }
-
-    public void setEspacial(Espacial espacial) {
-        this.espacial = espacial;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+        if (tipo.equalsIgnoreCase("espacial")) {
+            tipo = "espacial";
+        } else {
+            tipo = "normal";
+        }
     }
 
     public double getComida() {
@@ -72,7 +67,7 @@ public class Primates extends SeresVivos {
 
     @Override
     public String toString() {
-        return "Primates{" + "aereo=" + aereo + ", espacial=" + espacial + ", comida=" + comida + ", planeta=" + planeta + ", lugarnacimiento=" + lugarnacimiento + '}';
+        return "Primates{" + "tipo=" + tipo + ", comida=" + comida + ", planeta=" + planeta + ", lugarnacimiento=" + lugarnacimiento + '}';
     }
 
 }

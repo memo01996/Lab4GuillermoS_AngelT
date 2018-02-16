@@ -21,6 +21,7 @@ public class Ingenieros extends SeresVivos {
     private String fechanacimiento;
 
     public void cafe(int cafe) {
+        this.cafe = cafe;
         if (cafe == 0) {
             cafe = 100;
         }
