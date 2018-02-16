@@ -12,6 +12,8 @@ public class Lab4_GuillermoS_AngelT {
         
         ArrayList<Ingenieros> usuarios= new ArrayList();
         ArrayList<Primates> primates = new ArrayList();
+        ArrayList<NaveEspacial> nave = new ArrayList();
+        ArrayList<MediosTransporte> medios = new ArrayList();
         ArrayList<String> idiomas = new ArrayList();
         
         
@@ -105,8 +107,9 @@ public class Lab4_GuillermoS_AngelT {
                                                 System.err.println("¡No se puede crear desde este menú!\n");
                                                 break;
                                             case 2:
-                                                System.out.println("Modificar Ingenieros\n");
-                                                
+                                                System.out.println("Modificar Ingenieros\n"
+                                                        + "Ingrese la posición del ingeniero a eliminar: ");
+                                                int pos_mod= sc.nextInt();
                                                 
                                                 break;
                                             case 3:
@@ -117,7 +120,7 @@ public class Lab4_GuillermoS_AngelT {
                                                 
                                                 break;
                                             default:
-                                                if (CRUD()<0 || CRUD() >1){
+                                                if (CRUD()<0 || CRUD() >3){
                                                 System.err.println("Seleccione una opción válida\n");}
                                                 break;
                                                 
@@ -134,7 +137,40 @@ public class Lab4_GuillermoS_AngelT {
                                                 System.err.println("Agregar Primates\n");
                                                 break;
                                             case 2:
-                                                System.out.println("Modificar Primates\n");
+                                                System.out.println("Modificar Primates\n"
+                                                        + "Ingrese la posición del ingeniero a eliminar: ");
+                                                int pos_mod_prim= sc.nextInt();
+                                                
+                                                
+                                                break;
+                                            case 3:
+                                                System.out.println("Eliminar Primates\n"
+                                                        + "Ingrese la posición del Primate a eliminar: ");
+                                                int pos= sc.nextInt();
+                                                usuarios.remove(pos);
+                                                
+                                                break;
+                                            default:
+                                                if (CRUD()<0 || CRUD() >3){
+                                                System.err.println("Seleccione una opción válida\n");}
+                                                break;
+                                                
+                                        }
+                                        
+                                    }while(CRUD()!=0);
+                                    break;
+                                case 3:
+                                    System.out.println("Transportes\n");
+                                    
+                                    do{
+                                        switch(CRUD()){
+                                            case 1:
+                                                System.out.println("Agregar Transportes\n");
+                                                break;
+                                            case 2:
+                                                System.out.println("Modificar Primates\n"
+                                                        + "Ingrese la posición del ingeniero a eliminar: ");
+                                                int pos_mod_prim= sc.nextInt();
                                                 
                                                 
                                                 break;
@@ -153,8 +189,6 @@ public class Lab4_GuillermoS_AngelT {
                                         }
                                         
                                     }while(CRUD()!=0);
-                                    break;
-                                case 3:
                                     break;
                                 case 4:
                                     break;
