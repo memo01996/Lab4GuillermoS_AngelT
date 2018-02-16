@@ -11,6 +11,7 @@ public class Lab4_GuillermoS_AngelT {
 
         
         ArrayList<Ingenieros> usuarios= new ArrayList();
+        ArrayList<Primates> primates = new ArrayList();
         ArrayList<String> idiomas = new ArrayList();
         
         
@@ -96,11 +97,68 @@ public class Lab4_GuillermoS_AngelT {
                         do {
                             switch(menu2()){
                                 case 1:
-                                    System.out.println("");
+                                    System.out.println("Ingenieros\n");
+                                    
+                                    do{
+                                        switch(CRUD()){
+                                            case 1:
+                                                System.err.println("¡No se puede crear desde este menú!\n");
+                                                break;
+                                            case 2:
+                                                System.out.println("Modificar Ingenieros\n");
+                                                
+                                                
+                                                break;
+                                            case 3:
+                                                System.out.println("Eliminar Ingenieros\n"
+                                                        + "Ingrese la posición del ingeniero a eliminar: ");
+                                                int pos= sc.nextInt();
+                                                usuarios.remove(pos);
+                                                
+                                                break;
+                                            default:
+                                                if (CRUD()<0 || CRUD() >1){
+                                                System.err.println("Seleccione una opción válida\n");}
+                                                break;
+                                                
+                                        }
+                                        
+                                    }while(CRUD()!=0);
                                     break;
                                 case 2:
+                                     System.out.println("Primates\n");
+                                    
+                                    do{
+                                        switch(CRUD()){
+                                            case 1:
+                                                System.err.println("Agregar Primates\n");
+                                                break;
+                                            case 2:
+                                                System.out.println("Modificar Primates\n");
+                                                
+                                                
+                                                break;
+                                            case 3:
+                                                System.out.println("Eliminar Primates\n"
+                                                        + "Ingrese la posición del Primate a eliminar: ");
+                                                int pos= sc.nextInt();
+                                                usuarios.remove(pos);
+                                                
+                                                break;
+                                            default:
+                                                if (CRUD()<0 || CRUD() >1){
+                                                System.err.println("Seleccione una opción válida\n");}
+                                                break;
+                                                
+                                        }
+                                        
+                                    }while(CRUD()!=0);
                                     break;
                                 case 3:
+                                    break;
+                                case 4:
+                                    break;
+                                default:
                                     break;
                                     
                             }
