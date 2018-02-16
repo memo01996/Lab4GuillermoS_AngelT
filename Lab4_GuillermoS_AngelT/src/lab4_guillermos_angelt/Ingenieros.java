@@ -21,6 +21,7 @@ public class Ingenieros extends SeresVivos {
     private String fechanacimiento;
 
     public Ingenieros() {
+        super();
     }
 
     public Ingenieros(String correo, String usuario, String contrasena, ArrayList<String> listaidiomas, int cafe, String fechanacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {

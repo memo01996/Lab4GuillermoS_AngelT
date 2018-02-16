@@ -18,6 +18,7 @@ public class Primates extends SeresVivos {
     private String lugarnacimiento;
 
     public Primates() {
+        super();
     }
 
     public Primates(Aereo aereo, Espacial espacial, double comida, String planeta, String lugarnacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {

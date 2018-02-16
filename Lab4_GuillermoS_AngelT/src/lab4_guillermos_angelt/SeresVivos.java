@@ -9,6 +9,7 @@ public class SeresVivos {
     private double peso;
 
     public SeresVivos() {
+        super();
     }
 
     public SeresVivos(String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {

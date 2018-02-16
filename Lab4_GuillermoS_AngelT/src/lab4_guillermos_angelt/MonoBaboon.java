@@ -16,6 +16,7 @@ public class MonoBaboon extends Primates {
     private Color color;
 
     public MonoBaboon() {
+        super();
     }
 
     public MonoBaboon(Color color, Aereo aereo, Espacial espacial, double comida, String planeta, String lugarnacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {
