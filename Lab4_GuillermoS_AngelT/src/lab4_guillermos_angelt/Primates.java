@@ -10,8 +10,8 @@ package lab4_guillermos_angelt;
  * @author Memo
  */
 public class Primates extends SeresVivos{
-    private Aereo;
-    private Espacial;
+    private Aereo aereo;
+    private Espacial espacial;
     private double comida;
     private String planeta;
     private String lugarnacimiento;
