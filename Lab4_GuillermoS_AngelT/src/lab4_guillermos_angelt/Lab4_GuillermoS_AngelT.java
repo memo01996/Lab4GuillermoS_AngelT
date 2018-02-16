@@ -8,6 +8,7 @@ public class Lab4_GuillermoS_AngelT {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+
         
         ArrayList<Ingenieros> usuarios= new ArrayList();
         ArrayList<String> idiomas = new ArrayList();
@@ -32,7 +33,7 @@ public class Lab4_GuillermoS_AngelT {
                         System.out.println("Escriba el grupo sanguíneo: ");
                         String grupo = sc.next();
                         
-                        System.out.println("Escriba el grupo sanguíneo: ");
+                        System.out.println("Escriba el sexo: ");
                         String sexo = sc.next();
                         
                         System.out.println("Ingrese la altura: ");
@@ -95,7 +96,8 @@ public class Lab4_GuillermoS_AngelT {
                 break;
         }
         }while(menu()!=0);
-        
+
+
     }
 
     public static int menu() {
@@ -109,14 +111,15 @@ public class Lab4_GuillermoS_AngelT {
     }//fin menu
 
     public static int menu2() {
-        
+
         System.out.println("Administrar sistema\n"
-                        + "1 - Ingenieros\n"
-                        + "2 - Primates\n"
-                        + "3 - Transportes\n"
-                        + "4 - Viajes\n"
-                        + "0 - regresar\n");
+                + "1 - Ingenieros\n"
+                + "2 - Primates\n"
+                + "3 - Transportes\n"
+                + "4 - Viajes\n"
+                + "0 - regresar\n");
         int admin = sc.nextInt();
         return admin;
     }
+
 }
