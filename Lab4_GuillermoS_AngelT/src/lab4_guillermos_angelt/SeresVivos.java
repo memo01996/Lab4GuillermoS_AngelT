@@ -8,6 +8,9 @@ public class SeresVivos {
     private double altura;
     private double peso;
 
+    public void cafe(int cafe) {
+    }
+
     public SeresVivos() {
         super();
     }

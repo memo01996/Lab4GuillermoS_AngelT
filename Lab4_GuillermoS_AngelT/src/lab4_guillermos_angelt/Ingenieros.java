@@ -20,6 +20,12 @@ public class Ingenieros extends SeresVivos {
     private int cafe;
     private String fechanacimiento;
 
+    public void cafe(int cafe) {
+        if (cafe == 0) {
+            cafe = 100;
+        }
+    }
+
     public Ingenieros() {
         super();
     }
