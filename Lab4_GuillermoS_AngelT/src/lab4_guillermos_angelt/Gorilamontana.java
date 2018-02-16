@@ -9,6 +9,34 @@ package lab4_guillermos_angelt;
  *
  * @author Memo
  */
-public class Gorilamontana extends Primates{
+public class Gorilamontana extends Primates {
+
     private int IQ;
+
+    public Gorilamontana() {
+    }
+
+    public Gorilamontana(int IQ, Aereo aereo, Espacial espacial, double comida, String planeta, String lugarnacimiento, String Nombre, String GrupoSanguineo, String Sexo, double altura, double peso) {
+        super(aereo, espacial, comida, planeta, lugarnacimiento, Nombre, GrupoSanguineo, Sexo, altura, peso);
+        this.IQ = IQ;
+    }
+
+    public int getIQ() {
+        return IQ;
+    }
+
+    public void setIQ(int IQ) {
+        if (IQ > 129 && IQ < 140) {
+            this.IQ = IQ;
+        } else {
+            System.out.println("IQ no en el rango > 129 Y < 140");
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Gorilamontana{" + "IQ=" + IQ + '}';
+    }
+
 }
