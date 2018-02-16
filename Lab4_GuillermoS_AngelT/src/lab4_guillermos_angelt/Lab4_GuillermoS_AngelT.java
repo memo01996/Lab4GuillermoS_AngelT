@@ -198,10 +198,10 @@ public class Lab4_GuillermoS_AngelT {
                                                 double peso=sc.nextDouble();
                                                 
                                                 System.out.println("Ingrese el tipo de área: (normal / espacial) ");
-                                                String area = sc.next();
+                                                String tipo = sc.next();
                                                 
                                                 System.out.println("Ingrese la cantidad de comida: ");
-                                                int comida=sc.nextInt();
+                                                double comida=sc.nextInt();
                                                 
                                                 System.out.println("Ingrese el planeta asignado: ");
                                                 String planeta = sc.next();
@@ -209,7 +209,7 @@ public class Lab4_GuillermoS_AngelT {
                                                 System.out.println("Ingrese el lugar de nacimiento: ");
                                                 String lugar = sc.next();
                                                 
-                                                
+                                                primates.add(new Primates(tipo, comida, planeta, lugar, nombre, grupo, sexo, altura, peso));
                                                 break;
                                             case 2:
                                                 System.out.println("Modificar Primates\n"
@@ -222,7 +222,7 @@ public class Lab4_GuillermoS_AngelT {
                                                 System.out.println("Eliminar Primates\n"
                                                         + "Ingrese la posición del Primate a eliminar: ");
                                                 int pos= sc.nextInt();
-                                                usuarios.remove(pos);
+                                                primates.remove(pos);
                                                 
                                                 break;
                                             default:
