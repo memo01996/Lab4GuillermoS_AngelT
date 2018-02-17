@@ -241,18 +241,14 @@ public class Lab4_GuillermoS_AngelT {
                                             switch (CRUD()) {
                                                 case 1:
                                                     System.out.println("Agregar Transportes\n");
-
                                                     System.out.println("Ingrese la capacidad del tanque: ");
                                                     int capacidad = sc.nextInt();
-
                                                     System.out.println("Ingrese la distancia que puede recorrer: ");
                                                     int distancia = sc.nextInt();
-
                                                     System.out.println("Qué tipo de nave tipo de medio usará: "
                                                             + "1 - Aéreo normal\n"
                                                             + "2 - Espacial\n");
                                                     int op = sc.nextInt();
-
                                                     if (op == 1) {
                                                         System.out.println("Qué tipo de combustible tiene la aeronave: "
                                                                 + "1 - Súper\n"
@@ -262,25 +258,20 @@ public class Lab4_GuillermoS_AngelT {
                                                         String Gaso = sc.next();
                                                         System.out.println("Ingrese el país de salida: ");
                                                         String pais_out = sc.next();
-
                                                         System.out.println("Ingrese el país de entrada: ");
                                                         String pais_in = sc.next();
-
                                                         System.out.println("Ingrese el tipo de nave: "
                                                                 + "1 - Helicóptero\n"
                                                                 + "2 - Avión Comercial\n");
                                                         int tipo_nav = sc.nextInt();
-
                                                         if (tipo_nav == 1) {
                                                             System.out.println("Ingrese el número de hélices: ");
                                                             int n_helices = sc.nextInt();
-
                                                             System.out.println("Ingrese el número de patas: ");
                                                             int n_patas = sc.nextInt();
                                                         } else {
                                                             System.out.println("Soporta piloto automático? ");
                                                             int passengers = sc.nextInt();
-
                                                             System.out.println("Ingrese el número de patas: ");
                                                             int n_patas = sc.nextInt();
                                                         }
@@ -289,13 +280,10 @@ public class Lab4_GuillermoS_AngelT {
                                                                 + "1 - Químico sólido\n"
                                                                 + "2 - Propelente líquido\n");
                                                         int combustible = sc.nextInt();
-
                                                         System.out.println("Ingrese el planeta de salida: ");
                                                         String planeta_out = sc.next();
-
                                                         System.out.println("Ingrese el planeta de entrada: ");
                                                         String planeta_in = sc.next();
-
                                                         System.out.println("Ingrese el tipo de nave espacial: "
                                                                 + "1 - Nave espacial\n"
                                                                 + "2 - Cohete\n");
@@ -308,77 +296,62 @@ public class Lab4_GuillermoS_AngelT {
                                                             int separaciones = sc.nextInt();
                                                         }
                                                     }
-
                                                     break;
                                                 case 2:
                                                     System.out.println("Modificar Transportes\n"
                                                             + "Ingrese la posición del transporte a eliminar: ");
                                                     int pos_mod_prim = sc.nextInt();
-
                                                     break;
                                                 case 3:
                                                     System.out.println("Eliminar Transportes\n"
                                                             + "Ingrese la posición del Transporte a eliminar: ");
                                                     int pos = sc.nextInt();
                                                     usuarios.remove(pos);
-
                                                     break;
                                                 default:
                                                     if (CRUD() < 0 || CRUD() > 1) {
                                                         System.err.println("Seleccione una opción válida\n");
                                                     }
                                                     break;
-
                                             }
-
                                         } while (CRUD() != 0);
                                         break;
                                     case 4:
                                         System.out.println("Viajes\n");
-
                                         do {
                                             switch (CRUD()) {
                                                 case 1:
                                                     System.out.println("Agregar Viajes\n");
+                                                    
                                                     break;
                                                 case 2:
                                                     System.out.println("Modificar Viajes\n"
                                                             + "Ingrese la posición del Viaje a eliminar: ");
                                                     int pos_mod_prim = sc.nextInt();
-
                                                     break;
                                                 case 3:
                                                     System.out.println("Eliminar Viajes\n"
                                                             + "Ingrese la posición del Viaje a eliminar: ");
                                                     int pos = sc.nextInt();
                                                     usuarios.remove(pos);
-
                                                     break;
                                                 default:
                                                     if (CRUD() < 0 || CRUD() > 1) {
                                                         System.err.println("Seleccione una opción válida\n");
                                                     }
                                                     break;
-
                                             }
-
                                         } while (CRUD() != 0);
                                         break;
                                     default:
                                         break;
-
                                 }
-
                             } while (menu2() != 0);
-
                         } else {
                             System.err.println("Usuario o contraseña incorrecta\n");
                         }
-
                     }
-
                     break;
-
                 default:
                     if (menu() < 0 || menu() > 1) {
                         System.err.println("Seleccione una opción válida\n");
@@ -387,7 +360,7 @@ public class Lab4_GuillermoS_AngelT {
             }
         } while (menu() != 0);
 
-    }
+    }//fin main
 
     public static int menu() {
         System.out.println("Menu");
@@ -409,7 +382,7 @@ public class Lab4_GuillermoS_AngelT {
                 + "0 - regresar\n");
         int admin = sc.nextInt();
         return admin;
-    }
+    }//fin menu2
 
     public static int CRUD() {
         System.out.println("1 - Agregar\n"
@@ -419,6 +392,6 @@ public class Lab4_GuillermoS_AngelT {
                 + "Ingrese Opcion:");
         int op = sc.nextInt();
         return op;
-    }
+    }//fin crud
 
-}
+}//fin class

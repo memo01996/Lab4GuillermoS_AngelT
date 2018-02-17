@@ -9,8 +9,8 @@ public class Avion extends Aereo {
         super();
     }
 
-    public Avion(int nPasajeros, String funcion, int gasolina, String pais_in, String pais_out, int tanque, int distancia, int altitud) {
-        super(gasolina, pais_in, pais_out, tanque, distancia, altitud);
+    public Avion(int nPasajeros, String funcion, String pais_in, String pais_out, String Gaso, int tanque, int distancia, int altitud) {
+        super(pais_in, pais_out, Gaso, tanque, distancia, altitud);
         this.nPasajeros = nPasajeros;
         this.funcion = funcion;
     }
